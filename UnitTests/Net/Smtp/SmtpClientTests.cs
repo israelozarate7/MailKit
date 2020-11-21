@@ -1755,7 +1755,7 @@ namespace UnitTests.Net.Smtp {
 
 				try {
 					var credentials = new NetworkCredential ("username", "password");
-					var sasl = new SaslMechanismLogin (new Uri ("smtp://localhost"), credentials);
+					var sasl = new SaslMechanismLogin (credentials);
 
 					client.Authenticate (sasl);
 				} catch (Exception ex) {
@@ -1815,7 +1815,7 @@ namespace UnitTests.Net.Smtp {
 
 				try {
 					var credentials = new NetworkCredential ("username", "password");
-					var sasl = new SaslMechanismLogin (new Uri ("smtp://localhost"), credentials);
+					var sasl = new SaslMechanismLogin (credentials);
 
 					await client.AuthenticateAsync (sasl);
 				} catch (Exception ex) {
