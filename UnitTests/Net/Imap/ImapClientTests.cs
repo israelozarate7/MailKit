@@ -5089,7 +5089,7 @@ namespace UnitTests.Net.Imap {
 						ImapEvent.FlagChange
 					}),
 					new ImapEventGroup (new ImapMailboxFilter.Subtree (inbox, folder), new List<ImapEvent> {
-						new ImapEvent.MessageNew (),
+						new ImapEvent.MessageNew (new FetchRequest ()),
 						ImapEvent.MessageExpunge,
 						ImapEvent.MailboxMetadataChange,
 						ImapEvent.ServerMetadataChange
@@ -5289,7 +5289,7 @@ namespace UnitTests.Net.Imap {
 						ImapEvent.FlagChange
 					}),
 					new ImapEventGroup (new ImapMailboxFilter.Subtree (inbox, folder), new List<ImapEvent> {
-						new ImapEvent.MessageNew (),
+						new ImapEvent.MessageNew (new FetchRequest ()),
 						ImapEvent.MessageExpunge,
 						ImapEvent.MailboxMetadataChange,
 						ImapEvent.ServerMetadataChange
